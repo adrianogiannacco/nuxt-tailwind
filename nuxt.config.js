@@ -36,6 +36,13 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
+  googleFonts: {
+    display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+    families: {
+      Raleway: [300, 400, 700],
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

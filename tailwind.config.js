@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
   purge: {
     content: [
@@ -16,22 +14,21 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       blue: {
-        DEFAULT: '#007a91',
-        darker: '#006178',
+        lighter: '#71d0ff',
+        light: '#397fa3',
+        DEFAULT: '#2b6481',
+        dark: '#275a74',
       },
       red: {
-        light: '#ea5c4d',
-        DEFAULT: '#e50005',
+        DEFAULT: '#c12400',
+        dark: '#b22100',
       },
-      yellow: {
-        DEFAULT: '#fbbc04',
-      },
-      green: '#2fa358',
       gray: {
-        lighter: '#e5e5e5',
-        light: '#cccccc',
+        lightest: '#f5f5f5',
+        lighter: '#e6e6e6',
+        light: '#d5d5d5',
+        variant: '#999999',
         DEFAULT: '#666666',
-        dark: '#333333',
       },
       black: {
         light: '#262626',
@@ -39,17 +36,15 @@ module.exports = {
       },
     },
     fontSize: {
-      button: ['.875rem', '1rem'],
-      input: ['1rem', '1.25rem'],
-      tinier: '.75rem',
-      tiny: '.875rem',
-      base: '1rem',
-      'headline-6': ['1.125rem', '1.5rem'],
-      'headline-5': ['1.25rem', '1.75rem'],
-      'headline-4': ['2.125rem', '2.25rem'],
-      'headline-3': ['3rem', '3.25rem'],
-      'headline-2': ['3.6875rem', '3.75rem'],
-      'headline-1': ['5.9375rem', '6.25rem'],
+      xs: ['0.75rem', '1rem'],
+      sm: ['0.875rem', '1.25rem'],
+      base: ['1rem', '1.5rem'],
+      lg: ['1.125rem', '1.75rem'],
+      xl: ['1.25rem', '1.75rem'],
+      '2xl': ['1.5rem', '2rem'],
+      '3xl': ['1.875rem', '2.25rem'],
+      '4xl': ['2.25rem', '2.5rem'],
+      '5xl': ['3rem', '1'],
     },
     screens: {
       xs: '480px',
@@ -61,7 +56,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['"Open Sans"', 'Arial', 'sans-serif'],
+        sans: ['"Raleway"', 'Arial', 'sans-serif'],
       },
     },
   },

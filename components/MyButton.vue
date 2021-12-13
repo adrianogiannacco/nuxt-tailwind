@@ -1,26 +1,23 @@
 <template>
-  <button class="my-button" :class="variant ? `my-button--${variant}`: ''">
+  <button
+    class="my-button"
+    :class="[variant ? `my-button--${variant}` : '', { hidden: hidden }]"
+  >
     <slot></slot>
   </button>
 </template>
 
 <script>
-  export default {
-    props: {
-      variant: {
-        type: String,
-        default: ''
-      },
+export default {
+  props: {
+    variant: {
+      type: String,
+      default: '',
     },
-  }
-</script>
-
-<style lang="postcss">
-.my-button {
-  @apply border rounded border-gray py-2 px-4 uppercase text-gray;
-
-  &--primary {
-    @apply border-blue bg-blue text-white;
-  }
+    hidden: {
+      type: Boolean,
+      default: false,
+    },
+  },
 }
-</style>
+</script>

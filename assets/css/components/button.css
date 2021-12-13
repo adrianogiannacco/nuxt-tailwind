@@ -1,0 +1,9 @@
+@layer components {
+  .my-button {
+    @apply inline-flex items-center h-12 border rounded border-gray px-4 uppercase text-gray transition-colors duration-200;
+
+    &--primary {
+      @apply border-red bg-red text-white hover:bg-red-dark;
+    }
+  }
+}

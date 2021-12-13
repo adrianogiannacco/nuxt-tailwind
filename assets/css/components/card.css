@@ -1,0 +1,25 @@
+@layer components {
+  .my-card {
+    @apply shadow-lg flex-1 flex flex-col bg-white rounded overflow-hidden;
+
+    &__inner {
+      @apply p-3 flex flex-col flex-1;
+    }
+
+    &__title {
+      @apply text-2xl uppercase mb-3;
+    }
+
+    &__date {
+      @apply italic text-gray-variant mb-3 text-sm;
+    }
+
+    &__tags {
+      @apply flex flex-wrap mb-6 gap-3;
+    }
+
+    &__tags-item {
+      @apply inline-flex items-center text-white bg-gray-light rounded-full h-8 px-4;
+    }
+  }
+}
