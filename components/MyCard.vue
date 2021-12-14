@@ -1,7 +1,14 @@
 <template>
-  <div class="my-card">
-    <img v-if="img" :src="img" alt="alt" />
-    <div class="my-card__inner">
+  <div class="my-card" :class="`my-card--${layout}`">
+    <div class="my-card__img" :class="`my-card__img--${layout}`">
+      <img
+        v-if="img"
+        :src="img"
+        alt="alt"
+        :class="{ 'h-full object-cover': layout === 'row' }"
+      />
+    </div>
+    <div class="my-card__inner" :class="`my-card__inner--${layout}`">
       <h2 v-if="title" class="my-card__title" v-text="title"></h2>
       <div v-if="$slots.content" class="flex-1">
         <p class="mb-3">
@@ -27,6 +34,10 @@
 <script>
 export default {
   props: {
+    layout: {
+      type: String,
+      default: 'col',
+    },
     title: {
       type: String,
       default: '',

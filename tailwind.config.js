@@ -58,6 +58,9 @@ module.exports = {
       fontFamily: {
         sans: ['"Raleway"', 'Arial', 'sans-serif'],
       },
+      flexGrow: {
+        2: 2,
+      },
     },
   },
   variants: {
@@ -71,7 +74,7 @@ module.exports = {
       addComponents({
         '.container': {
           '@apply mx-auto': {},
-          width: 'calc(100% - 2rem)',
+          width: `calc(100% - ${theme('spacing.8')})`,
           maxWidth: theme('screens.xl'),
         },
       })

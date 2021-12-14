@@ -2,8 +2,22 @@
   .my-card {
     @apply shadow-lg flex-1 flex flex-col bg-white rounded overflow-hidden;
 
+    &--row {
+      @apply md:flex-row;
+    }
+
+    &__img {
+      &--row {
+        @apply md:flex-1;
+      }
+    }
+
     &__inner {
       @apply p-3 flex flex-col flex-1;
+
+      &--row {
+        @apply md:flex-1;
+      }
     }
 
     &__title {
